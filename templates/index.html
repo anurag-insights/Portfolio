@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-avatar">
+                    <img src="../Images/logo.jpeg" alt="Anurag logo">
+                </div>
+                <a href="#home">Anurag's Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Anurag Sharma</span></h1>
+                <p class="text-center">|| Data Analyst ||</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="cv.pdf" class="btn btn-secondary" target="_blank">View CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Data Analytics with experience analyzing datasets using Python, SQL, and Power BI. Completed multiple academic and personal projects involving data cleaning, trend analysis, and dashboard creation. Strong analytical mindset with a passion for transforming data into insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Vendor Performance Analysis</h3>
+                            <p>Analyzed vendor performance metrics, identify trends, and provide actionable insights to improve efficiency and reduce costs.</p>
+                            <a href="#" class="btn-small">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Customer Segmentation Analysis</h3>
+                            <p>Conducted exploratory analysis and K-means clustering to uncover customer segments, enabling targeted marketing and retention strategies.</p>
+                            <a href="#" class="btn-small">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>End-to-End Data Pipeline & Analysis</h3>
+                            <p>Designed and automated an end-to-end data pipeline enabling efficient analysis and actionable business insights.</p>
+                            <a href="#" class="btn-small">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-container">
+                    <a href="projects.html" class="btn">View All Projects</a>
+                </div>
+            </div>
+        
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="form-message" style="display:none; margin-top: 10px; font-weight: bold; text-align: center;"></p>
+                </form>
+                <p class="form-note">Note: You will receive a response within 24 hours on the particular email address.<br>Thankyou for your interest.<br>You can also contact me through the below social media links provided.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal-content">
+            <button class="image-modal-close" aria-label="Close">&times;</button>
+            <img src="" alt="Preview" class="image-modal-img">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Anurag Sharma Portfolio.</p>
+        <div class="social-links">
+            <a href="https://github.com/anurag-insights"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anurag-sharma-297774277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:aanuraag007@gmail.com
+    ?subject=Contact%20from%20Portfolio
+    &body=Hi%20Anurag,%0D%0A%0D%0A">
+    <i class="fas fa-envelope"></i>
+</a>
+        </div>
+    </footer>
+
+    <script src="../Scripts/script.js"></script>
+</body>
+</html>
