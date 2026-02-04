@@ -14,12 +14,18 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files
-// Serve 'templates' as the root (so index.html is at /)
-app.use(express.static(path.join(__dirname, '../templates')));
+// Serve project root so index.html at '/'
+app.use(express.static(path.join(__dirname, '..')));
+// Also expose 'templates' explicitly for direct links
+app.use('/templates', express.static(path.join(__dirname, '../templates')));
 // Serve 'Scripts' folder (for script.js)
 app.use('/Scripts', express.static(path.join(__dirname, '../Scripts')));
 // Serve 'Images' folder
 app.use('/Images', express.static(path.join(__dirname, '../Images')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
 
 // Nodemailer Transporter
 const transporter = nodemailer.createTransport({
