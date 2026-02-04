@@ -11,34 +11,41 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('toggle');
     });
 
-    // Close mobile menu when a link is clicked
-    links.forEach(link => {
-        link.addEventListener('click', () => {
+    // Close mobile menu when a nav link is clicked (anchor-based for better mobile support)
+    const navAnchors = document.querySelectorAll('.nav-links a');
+    const header = document.querySelector('header');
+    navAnchors.forEach(a => {
+        a.addEventListener('click', (e) => {
+            // Close the mobile menu immediately
             navLinks.classList.remove('active');
             hamburger.classList.remove('toggle');
+
+            const href = a.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    const headerOffset = (header ? header.offsetHeight : 60);
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            }
         });
     });
 
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth Scrolling for other in-page anchor links (non-nav)
+    document.querySelectorAll('a[href^="#"]:not(.nav-links a)').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
+            if (!targetId || targetId === '#') return;
             const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Account for fixed header height
-                const headerOffset = 60;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
+            if (!targetElement) return;
+            e.preventDefault();
+            const headerOffset = (header ? header.offsetHeight : 60);
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         });
     });
 
