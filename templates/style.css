@@ -193,26 +193,6 @@ header {
     object-position: center;
 }
 
-.image-modal-close {
-    position: fixed;
-    top: -9999px;
-    left: -9999px;
-    background: var(--card-bg);
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
-    color: #333;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    z-index: 2100;
-    font-size: 34px;
-    line-height: 1;
-}
-
 .logo-avatar,
 .hero-photo-circle {
     cursor: pointer;
