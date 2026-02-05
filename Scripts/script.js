@@ -115,12 +115,6 @@ if (contactForm) {
         });
     }
 
-    const imageModalClose = imageModal ? imageModal.querySelector('.image-modal-close') : null;
-    if (imageModalClose) {
-        imageModalClose.addEventListener('click', () => {
-            imageModal.classList.remove('open');
-        });
-    }
 
     function positionCloseButton() {
         if (!imageModal) return;
