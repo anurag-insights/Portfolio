@@ -2,19 +2,13 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node ../Scripts/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"Static site - no backend\"",
+    "test": "echo \"No tests\" && exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "nodemailer": "^7.0.13"
-  }
+  "type": "commonjs"
 }

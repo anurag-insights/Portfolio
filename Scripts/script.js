@@ -50,63 +50,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Form Submission Handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.innerText;
+const contactForm = document.getElementById('contact-form');
 
-            // Disable button and change text
-            submitButton.disabled = true;
-            submitButton.innerText = 'Sending...';
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-            // Send data to server
-            fetch('http://localhost:3000/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, email, message })
-            })
-            .then(response => response.json())
-            .then(data => {
-                const messageElement = document.getElementById('form-message');
-                if (data.success) {
-                    messageElement.innerText = "Message sent was successful";
-                    messageElement.style.color = "green";
-                    messageElement.style.display = "block";
-                    contactForm.reset();
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        messageElement.style.display = "none";
-                    }, 5000);
-                } else {
-                    messageElement.innerText = data.message || 'Failed to send message. Please try again later.';
-                    messageElement.style.color = "red";
-                    messageElement.style.display = "block";
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                const messageElement = document.getElementById('form-message');
-                messageElement.innerText = 'An error occurred. Please check if the server is running.';
-                messageElement.style.color = "red";
-                messageElement.style.display = "block";
-            })
-            .finally(() => {
-                // Re-enable button and reset text
-                submitButton.disabled = false;
-                submitButton.innerText = originalButtonText;
-            });
-        });
-    }
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const messageElement = document.getElementById('form-message');
+    const originalButtonText = submitButton.innerText;
+
+    submitButton.disabled = true;
+    submitButton.innerText = 'Sending...';
+
+    const formData = new FormData(contactForm);
+    const encodedData = new URLSearchParams(formData).toString();
+
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: encodedData
+    })
+    .then(() => {
+      messageElement.innerText = 'Message sent successfully!';
+      messageElement.style.color = 'green';
+      messageElement.style.display = 'block';
+      contactForm.reset();
+
+      setTimeout(() => {
+        messageElement.style.display = 'none';
+      }, 5000);
+    })
+    .catch((error) => {
+      console.error(error);
+      messageElement.innerText = 'Failed to send message. Please try again later.';
+      messageElement.style.color = 'red';
+      messageElement.style.display = 'block';
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.innerText = originalButtonText;
+    });
+  });
+}
+
 
     const imageModal = document.getElementById('image-modal');
     const imageModalImg = imageModal ? imageModal.querySelector('.image-modal-img') : null;
