@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anurag Sharma Portfolio</title>
+    <meta name="description" content="Portfolio of Anurag Sharma — Data Analyst & MERN Stack Developer. Data projects, ML, dashboards, and modern web apps.">
     <link rel="stylesheet" href="templates/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <div class="logo-avatar">
-                    <img src="Images/logo.jpeg" alt="Anurag logo">
+                <div class="logo-avatar" aria-hidden="true">
+                    <img src="Images/logo2.jpeg" alt="Anurag logo">
                 </div>
                 <a href="#home">Anurag's Portfolio</a>
             </div>
@@ -22,113 +24,300 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger" aria-label="Open menu" tabindex="0" role="button">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <!-- ============= HERO ============= -->
+        <section id="home" class="hero" aria-label="Introduction">
             <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Anurag Sharma</span></h1>
-                <p class="text-center">|| Data Analyst ||</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="resume.pdf" class="btn btn-secondary" target="_blank">View CV</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Data Analytics with experience analyzing datasets using Python, SQL, and Power BI. Completed multiple academic and personal projects involving data cleaning, trend analysis, and dashboard creation. Strong analytical mindset with a passion for transforming data into insights.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">My Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>Vendor Performance Analysis</h3>
-                            <p>Analyzed vendor performance metrics, identify trends, and provide actionable insights to improve efficiency and reduce costs.</p>
-                            <a href="#" class="btn-small">View Demo</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>Customer Segmentation Analysis</h3>
-                            <p>Conducted exploratory analysis and K-means clustering to uncover customer segments, enabling targeted marketing and retention strategies.</p>
-                            <a href="#" class="btn-small">View Demo</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>End-to-End Data Pipeline & Analysis</h3>
-                            <p>Designed and automated an end-to-end data pipeline enabling efficient analysis and actionable business insights.</p>
-                            <a href="#" class="btn-small">View Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="view-all-container">
-                    <a href="templates/projects.html" class="btn">View All Projects</a>
-                </div>
-            </div>
-        
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact">
-                    <p style="display:none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                <div class="hero-left">
+                    <div class="hero-tag reveal stagger-1">Available for work · Data / ML / AI</div>
+                    <p class="hero-greet reveal stagger-2">👋 Hello, I'm</p>
+                    <h1 class="reveal stagger-2">
+                        <span class="line-1">Anurag</span>
+                        <span class="line-2 highlight">Sharma</span>
+                    </h1>
+                    <p class="hero-lead reveal stagger-3">
+                        Data Scientist & Analyst, passionate about
+                        building dashboards, ML models, and end-to-end apps that turn raw data
+                        into real decisions.
                     </p>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <div class="hero-role reveal stagger-4">
+                        <i class="fas fa-briefcase" style="color:#22d3ee"></i>
+                        <span><strong>Data Scientist</strong></span>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <br>
+                    <div class="hero-buttons reveal stagger-5">
+                        <a href="#projects" class="btn">
+                            <i class="fas fa-briefcase"></i> View My Work
+                        </a>
+                        <a href="resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <i class="fas fa-file-alt"></i> View CV
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <div class="hero-stats reveal stagger-6" aria-label="Key metrics">
+                        <div class="hero-stat"><b>15+</b><span>Projects</span></div>
+                        <div class="hero-stat"><b>7</b><span>Tech Stack</span></div>
+                        <div class="hero-stat"><b>4</b><span>Core Focus</span></div>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
-                    <p id="form-message" style="display:none; margin-top: 10px; font-weight: bold; text-align: center;"></p>
-                </form>
-                <p class="form-note">Note: You will receive a response within 24 hours on the particular email address.<br>Thankyou for your interest.<br>You can also contact me through the below social media links provided.</p>
+                </div>
+
+                <div class="hero-right reveal stagger-3">
+                    <div class="hero-photo-wrap" id="heroPhotoBtn" aria-label="View profile picture">
+                        <div class="hero-photo-inner">
+                            <img src="Images/logo2.jpeg" alt="Anurag Sharma">
+                        </div>
+                    </div>
+                    <div class="hero-badge top" aria-hidden="true">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <div style="font-size:0.72rem;opacity:0.7;line-height:1">Powering</div>
+                            <div>Data Insights</div>
+                        </div>
+                    </div>
+                    <div class="hero-badge bot" aria-hidden="true">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <div style="font-size:0.72rem;opacity:0.7;line-height:1">Building</div>
+                            <div>Predictive Models</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= ABOUT ============= -->
+        <section id="about" class="about" aria-label="About me">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <div class="section-eyebrow reveal">
+                        <span class="num">01</span> / ABOUT ME
+                    </div>
+                    <h2 class="section-title reveal stagger-1">About Me</h2>
+                    <p class="section-subtitle reveal stagger-2">Curious data-first developer who loves turning messy datasets into
+                        clean stories, and prototypes into production.</p>
+                </div>
+                <div class="about-inner">
+                    <div class="about-card reveal stagger-1">
+                        <div class="about-text">
+                            <p>Data scientist with hands-on experience in Statistics, Python, SQL, Machine Learning and Power BI, gained through academic and self-driven projects. Skilled in Predictive Modeling, Exploratory Data Analysis (EDA), Statistical Analysis, Machine Learning, AI and Data Visualization.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <h3 class="reveal stagger-1">Skills & Tools</h3>
+                        <div class="skills-grid" role="list">
+                            <div class="skill-badge reveal stagger-1" role="listitem"><i class="fab fa-python"></i><span>Python</span></div>
+                            <div class="skill-badge reveal stagger-2" role="listitem"><i class="fas fa-database"></i><span>SQL</span></div>
+                            <div class="skill-badge reveal stagger-2" role="listitem"><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
+                            <div class="skill-badge reveal stagger-3" role="listitem"><i class="fas fa-robot"></i><span>ML</span></div>
+                            <div class="skill-badge reveal stagger-4" role="listitem"><i class="fas fa-brain"></i><span>AI</span></div>
+                            <div class="skill-badge reveal stagger-4" role="listitem"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+                        </div>
+
+                        <h3 class="reveal stagger-2" style="margin-top:3rem">Core Focus Areas</h3>
+                        <div class="focus-grid" role="list">
+                            <div class="focus-card reveal stagger-1" role="listitem">
+                                <div class="focus-icon" aria-hidden="true"><i class="fas fa-chart-pie"></i></div>
+                                <h4>Data Analysis &amp; EDA</h4>
+                                <p>Turning raw data into actionable insights with thorough exploratory analysis, pattern-spotting, and clear findings.</p>
+                            </div>
+                            <div class="focus-card reveal stagger-2" role="listitem">
+                                <div class="focus-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                                <h4>Visualization &amp; Dashboards</h4>
+                                <p>Designing Power BI and Python dashboards that make KPIs, trends, and outcomes easy to understand at a glance.</p>
+                            </div>
+                            <div class="focus-card reveal stagger-3" role="listitem">
+                                <div class="focus-icon" aria-hidden="true"><i class="fas fa-cogs"></i></div>
+                                <h4>Machine Learning</h4>
+                                <p>Building practical ML models for classification, regression, clustering, and forecasting — with strong evaluation and storytelling.</p>
+                            </div>
+                            <div class="focus-card reveal stagger-4" role="listitem">
+                                <div class="focus-icon" aria-hidden="true"><i class="fas fa-network-wired"></i></div>
+                                <h4>Data Pipelines &amp; AI <span>Applications</span></h4>
+                                <p>End-to-end data pipelines, SQL modeling, and AI-powered applications that connect models to real users.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= PROJECTS ============= -->
+        <section id="projects" class="projects" aria-label="Projects">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <div class="section-eyebrow reveal">
+                        <span class="num">02</span> / WORK
+                    </div>
+                    <h2 class="section-title reveal stagger-1">My Projects</h2>
+                    <p class="section-subtitle reveal stagger-2">A selection of data, ML, and pipeline projects. More on the All Projects page.</p>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Card 1 -->
+                    <article class="project-card reveal stagger-1">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                            <div class="project-info">
+                                <h3>Vendor Performance Data Analysis</h3>
+                                <p>Analyzed vendor performance metrics, identify trends, and provide actionable insights to improve efficiency and reduce costs.</p>
+                                <div class="project-tech" aria-label="Technologies used">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Pandas</span>
+                                    <span class="tech-badge">Power BI</span>
+                                </div>
+                                <a href="https://github.com/anurag-insights/Vendor-Performance-Analysis" class="btn-small">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="project-card reveal stagger-2">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+                            <div class="project-info">
+                                <h3>Customer Segmentation Analysis</h3>
+                                <p>Conducted exploratory analysis and K-means clustering to uncover customer segments, enabling targeted marketing and retention strategies.</p>
+                                <div class="project-tech" aria-label="Technologies used">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Scikit-learn</span>
+                                    <span class="tech-badge">ML</span>
+                                </div>
+                                <a href="https://github.com/anurag-insights/Customer-Segmentation-Analysis" class="btn-small">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="project-card reveal stagger-3">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-project-diagram"></i></div>
+                            <div class="project-info">
+                                <h3>End-to-End Data Pipeline &amp; Analysis</h3>
+                                <p>Designed and automated an end-to-end data pipeline enabling efficient analysis and actionable business insights.</p>
+                                <div class="project-tech" aria-label="Technologies used">
+                                    <span class="tech-badge">SQL</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">ETL</span>
+                                </div>
+                                <a href="https://github.com/anurag-insights/End-to-End-Data-Pipeline-Analysis" class="btn-small">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="view-all-container reveal stagger-5">
+                    <a href="templates/projects.html" class="btn">
+                        <i class="fas fa-layer-group"></i> View All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= CONTACT ============= -->
+        <section id="contact" class="contact" aria-label="Contact form">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <div class="section-eyebrow reveal">
+                        <span class="num">03</span> / CONTACT
+                    </div>
+                    <h2 class="section-title reveal stagger-1">Get In Touch</h2>
+                    <p class="section-subtitle reveal stagger-2">Got a project, a question, or an opportunity? Drop a message below.</p>
+                </div>
+
+                <div class="contact-wrap">
+                    <aside class="contact-side reveal stagger-1" aria-label="Contact details">
+                        <h3>Let's work together.</h3>
+                        <p>Have a dataset to explore, a dashboard to build? I'll reply within 24 hours.</p>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <small>Email</small>
+                                    <a href="mailto:aanuraag007@gmail.com
+    ?subject=Contact%20from%20Portfolio
+    &body=Hi%20Anurag,%0D%0A%0D%0A">anuraagg.insights@gmail.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <small>LinkedIn</small>
+                                    <a href="https://www.linkedin.com/in/anurag-sharma-297774277" target="_blank" rel="noopener">anurag-sharma</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <small>GitHub</small>
+                                    <a href="https://github.com/anurag-insights" target="_blank" rel="noopener">@anurag-insights</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <small>Location</small>
+                                    <a href="#" onclick="return false;" style="color:#fff;pointer-events:none">Nepal · Remote</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <div class="contact-form-panel reveal stagger-2">
+                        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                            <input type="hidden" name="form-name" value="contact">
+                            <p style="display:none;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                            <p id="form-message" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+
+                <p class="form-note reveal stagger-3">
+                    Note: You will receive a response within 24 hours on the particular email address.
+                    Thankyou for your interest.<br>You can also contact me through the social media links provided below.
+                </p>
             </div>
         </section>
     </main>
 
-    <div id="image-modal" class="image-modal">
+    <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-label="Profile image preview">
         <div class="image-modal-content">
-            <button class="image-modal-close" aria-label="Close">&times;</button>
             <img src="" alt="Preview" class="image-modal-img">
         </div>
     </div>
 
     <footer>
-        <p>&copy; Anurag Sharma Portfolio.</p>
-        <div class="social-links">
-            <a href="https://github.com/anurag-insights"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/anurag-sharma-297774277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+        <p>&copy; <span id="year"></span> Anurag Sharma Portfolio.</p>
+        <p style="margin-top:0.25rem;">Designed &amp; built with data in mind.</p>
+        <div class="social-links" aria-label="Social media links">
+            <a href="https://github.com/anurag-insights" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anurag-sharma-297774277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:aanuraag007@gmail.com
     ?subject=Contact%20from%20Portfolio
-    &body=Hi%20Anurag,%0D%0A%0D%0A">
-    <i class="fas fa-envelope"></i>
-</a>
+    &body=Hi%20Anurag,%0D%0A%0D%0A" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
+    <script>document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());</script>
     <script src="Scripts/script.js"></script>
 </body>
 </html>

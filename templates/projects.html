@@ -3,148 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects - Anurag Sharma Portfolio</title>
+    <title>All Projects — Anurag Sharma Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html">Anurag's Portfolio.</a></div>
+            <div class="logo">
+                <div class="logo-avatar" aria-hidden="true">
+                    <img src="../Images/logo.jpeg" alt="Anurag logo">
+                </div>
+                <a href="../index.html">Anurag's Portfolio.</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="../index.html#home">Home</a></li>
                 <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#projects" class="active">Projects</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger" aria-label="Open menu" tabindex="0" role="button">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="projects" style="padding-top: 100px;">
+        <section class="projects" style="padding-top: 120px;">
             <div class="container">
-                <a href="../index.html#projects" class="btn btn-secondary" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-arrow-left"></i> Back
-                </a>
-                <h2 class="section-title">All Projects</h2>
+                <div style="display:inline-flex;align-items:center;gap:0.75rem;margin-bottom:2rem;flex-wrap:wrap" class="reveal">
+                    <a href="../index.html#projects" class="btn btn-secondary" style="padding:0.75rem 1.35rem;--btn-shine:none" aria-label="Back to home">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </a>
+                </div>
+                <div class="section-title-wrap">
+                    <div class="section-eyebrow reveal">
+                        <span class="num">ALL</span> / PROJECTS
+                    </div>
+                    <h1 class="section-title reveal stagger-1" style="font-size:clamp(2rem,5vw,3.1rem)">Everything I've Built</h1>
+                    <p class="section-subtitle reveal stagger-2">12 end-to-end projects spanning data analysis, ML modeling, dashboards and pipelines.</p>
+                </div>
+
                 <div class="project-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>1. Covid-19 Data Analysis</h3>
-                            <p>Analyzing Covid-19 data to track cases, deaths, and recoveries using Python and Pandas.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    <!-- 1 -->
+                    <article class="project-card reveal stagger-1">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-virus"></i></div>
+                            <div class="project-info">
+                                <h3>1. Covid-19 Data Analysis</h3>
+                                <p>Analyzing Covid-19 data to track cases, deaths, and recoveries using Python and Pandas.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Pandas</span>
+                                    <span class="tech-badge">Matplotlib</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>2. Marketing Campaign Analysis</h3>
-                            <p>Analyzing marketing campaign data to optimize ROI and campaign effectiveness.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 2 -->
+                    <article class="project-card reveal stagger-2">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
+                            <div class="project-info">
+                                <h3>2. Marketing Campaign Analysis</h3>
+                                <p>Analyzing marketing campaign data to optimize ROI and campaign effectiveness.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">EDA</span>
+                                    <span class="tech-badge">SQL</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>3. Credit Card Fraud Detection</h3>
-                            <p>Detecting fraudulent transactions using machine learning algorithms.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 3 -->
+                    <article class="project-card reveal stagger-3">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+                            <div class="project-info">
+                                <h3>3. Credit Card Fraud Detection</h3>
+                                <p>Detecting fraudulent transactions using machine learning algorithms.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Scikit-learn</span>
+                                    <span class="tech-badge">ML</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>4. Time Series Forecasting</h3>
-                            <p>Forecasting future values using time series analysis and machine learning.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 4 -->
+                    <article class="project-card reveal stagger-4">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-chart-area"></i></div>
+                            <div class="project-info">
+                                <h3>4. Time Series Forecasting</h3>
+                                <p>Forecasting future values using time series analysis and machine learning.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Prophet</span>
+                                    <span class="tech-badge">Forecasting</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 5 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>5. Stock Market Analyzer</h3>
-                            <p>Python tool to analyze stock trends and visualize data using Matplotlib.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 5 -->
+                    <article class="project-card reveal stagger-5">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                            <div class="project-info">
+                                <h3>5. Stock Market Analyzer</h3>
+                                <p>Python tool to analyze stock trends and visualize data using Matplotlib.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Matplotlib</span>
+                                    <span class="tech-badge">Data Viz</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 6 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>6. E-Commerce Dashboard</h3>
-                            <p>A data analysis dashboard for e-commerce sales using Python and Pandas.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 6 -->
+                    <article class="project-card reveal stagger-6">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="project-info">
+                                <h3>6. E-Commerce Dashboard</h3>
+                                <p>A data analysis dashboard for e-commerce sales using Python and Pandas.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Power BI</span>
+                                    <span class="tech-badge">Pandas</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 7 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>7. Financial Data Analysis (Stocks / Crypto)</h3>
-                            <p>Analyzing financial data for stocks and cryptocurrencies using Python and Pandas.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 7 -->
+                    <article class="project-card reveal stagger-7">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-coins"></i></div>
+                            <div class="project-info">
+                                <h3>7. Financial Data Analysis</h3>
+                                <p>Analyzing financial data for stocks and cryptocurrencies using Python and Pandas.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Pandas</span>
+                                    <span class="tech-badge">Quant</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 8 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>8. HR Attrition Analysis</h3>
-                            <p>Analyzing employee attrition using machine learning to predict turnover.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 8 -->
+                    <article class="project-card reveal stagger-8">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-user-friends"></i></div>
+                            <div class="project-info">
+                                <h3>8. HR Attrition Analysis</h3>
+                                <p>Analyzing employee attrition using machine learning to predict turnover.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Scikit-learn</span>
+                                    <span class="tech-badge">Classification</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 9 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>9. Marketing Campaign Performance Analysis</h3>
-                            <p>Analyzing the performance of marketing campaigns to measure ROI and effectiveness.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 9 -->
+                    <article class="project-card reveal stagger-1">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+                            <div class="project-info">
+                                <h3>9. Campaign Performance Analysis</h3>
+                                <p>Analyzing the performance of marketing campaigns to measure ROI and effectiveness.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">SQL</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">A/B Testing</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 10 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>10. Social Media Engagement Analysis</h3>
-                            <p>Analyzing social media engagement metrics to measure audience interaction.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 10 -->
+                    <article class="project-card reveal stagger-2">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-heart"></i></div>
+                            <div class="project-info">
+                                <h3>10. Social Media Engagement Analysis</h3>
+                                <p>Analyzing social media engagement metrics to measure audience interaction.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Data Viz</span>
+                                    <span class="tech-badge">Power BI</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 11 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>11. Food Delivery Platform Analysis</h3>
-                            <p>Analyzing the performance of a food delivery platform to optimize operations.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 11 -->
+                    <article class="project-card reveal stagger-3">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-utensils"></i></div>
+                            <div class="project-info">
+                                <h3>11. Food Delivery Platform Analysis</h3>
+                                <p>Analyzing the performance of a food delivery platform to optimize operations.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">SQL</span>
+                                    <span class="tech-badge">Operations</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Project 12 -->
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>12. Website Traffic & Conversion Analysis</h3>
-                            <p>Analyzing website traffic and conversion rates to optimize user experience.</p>
-                            <a href="#" class="btn-small">View Demo</a>
+                    </article>
+                    <!-- 12 -->
+                    <article class="project-card reveal stagger-4">
+                        <div class="project-card-inner">
+                            <div class="project-icon" aria-hidden="true"><i class="fas fa-globe"></i></div>
+                            <div class="project-info">
+                                <h3>12. Website Traffic &amp; Conversion</h3>
+                                <p>Analyzing website traffic and conversion rates to optimize user experience.</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge">SQL</span>
+                                    <span class="tech-badge">Analytics</span>
+                                    <span class="tech-badge">Python</span>
+                                </div>
+                                <a href="#" class="btn-small">View Project</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
+    <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-label="Profile image preview">
+        <div class="image-modal-content">
+            <img src="" alt="Preview" class="image-modal-img">
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; Anurag Sharma Portfolio.</p>
-        <div class="social-links">
-            <a href="https://github.com/anurag-insights"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/anurag-sharma-297774277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+        <p>&copy; <span id="year"></span> Anurag Sharma Portfolio.</p>
+        <p style="margin-top:0.25rem;">Designed &amp; built with data in mind.</p>
+        <div class="social-links" aria-label="Social media links">
+            <a href="https://github.com/anurag-insights" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anurag-sharma-297774277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:aanuraag007@gmail.com
     ?subject=Contact%20from%20Portfolio
-    &body=Hi%20Anurag,%0D%0A%0D%0A">
-    <i class="fas fa-envelope"></i>
-</a>
+    &body=Hi%20Anurag,%0D%0A%0D%0A" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
+    <script>document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());</script>
     <script src="../Scripts/script.js"></script>
 </body>
 </html>
