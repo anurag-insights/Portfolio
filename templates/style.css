@@ -876,7 +876,8 @@ section {
     transition: transform var(--t), box-shadow var(--t), background var(--t), border-color var(--t);
 }
 
-.skill-badge i {
+.skill-badge i,
+.skill-badge .skill-logo {
     width: 30px;
     height: 30px;
     border-radius: var(--r-sm);
@@ -890,6 +891,12 @@ section {
     transition: transform var(--t-fast);
 }
 
+.skill-badge .skill-logo {
+    padding: 7px;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
 .skill-badge span { min-width: 0; }
 
 .skill-badge:hover {
@@ -899,7 +906,8 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
-.skill-badge:hover i { transform: scale(1.08) rotate(-4deg); }
+.skill-badge:hover i,
+.skill-badge:hover .skill-logo { transform: scale(1.08) rotate(-4deg); }
 
 /* Focus grid */
 .focus-grid {
@@ -1897,12 +1905,15 @@ span {
         font-size: 0.78rem;
     }
 
-    .skill-badge i {
+    .skill-badge i,
+    .skill-badge .skill-logo {
         width: 28px;
         height: 28px;
         font-size: 0.85rem;
         flex-shrink: 0;
     }
+
+    .skill-badge .skill-logo { padding: 6px; }
 
     .skill-badge span {
         overflow-wrap: anywhere;
